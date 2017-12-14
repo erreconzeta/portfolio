@@ -12,6 +12,13 @@ body {
 	src: url('font/apercu.otf'); 
 }
 
+.svg-style {
+	height: 100vh;
+	top:-5rem;
+	position: relative;
+	z-index: 1;
+}
+
 .header {
 	width: 60%;
 	height: 40rem;
