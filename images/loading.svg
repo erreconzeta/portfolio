@@ -4,7 +4,7 @@
 	fill:none;
 	stroke:white;
 	opacity: 0;
-	stroke-linecap:round;
+	stroke-linecap:butt;
 	stroke-linejoin:round;
 	stroke-width:10px;
 	stroke-dasharray: 10000;

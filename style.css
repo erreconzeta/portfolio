@@ -12,11 +12,19 @@ body {
 	src: url('font/apercu.otf'); 
 }
 
-.svg-style {
-	height: 100vh;
-	top:-5rem;
+.svg {
+	width: 100vw;
+	overflow-y: hidden;
+	margin: 0 auto;
+	  /* just to get an apsect ratio same as the SVG's: */
+	padding-top: 50%; 
+	height: 90vh; 
+	background-image: url(images/loading.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
 	position: relative;
-	z-index: 1;
+	z-index: 2;
+
 }
 
 .header {
@@ -84,34 +92,70 @@ body {
 @media only screen and (max-width: 700px) {
 	.title {
 		font-size: 1.5rem;
-		width: 20rem;
-		left: 5rem;
-		bottom: 0rem;
+		width: 20.9rem;
+    	left: -4%;
+		bottom: 5.5rem;
+
 	}
 	.header { 
 		width: 100%;
 	}
 	.gif { 
-		left: 0%;
+		left: -4%;
+    	position: absolute;
+	}
+	#line-text2 {
+		display: none;
+	}
+	#line-text {
+		display: none;
 	}
 
 }
 
-@media only screen and (max-width: 1270px) and (min-width: 701px) {
+
+@media only screen and (max-width: 830px) and (min-width: 701px) {
+	#line-text2 {
+		left: 30rem;
+		top: 25rem;
+		position: absolute;
+	}
+	#line-text {
+	}
+	.gif { 
+		left: 28%;
+	}
+	.title {
+		top: 24rem;
+		width: 25rem;
+		font-size: 2rem;
+	}
+
+}
+
+@media only screen and (max-width: 1270px) and (min-width: 831px) {
 	.title {
 		font-size: 1.5rem;
 		width: 20rem;
 		bottom: 8rem;
 	}
+	#line-text2 {
+		top: 25rem;
+		left: 29rem;
+	}
+	.title {
+		bottom: 5rem;
+	}
 
 }
+
 
 @media only screen and (min-width: 1271px) {
 	.header { 
 		width: 30%;
 	}
 	.gif { 
-		left: 70%;
+		left: 100%;
 	}
 	.title {
 		width: 30rem;
@@ -122,7 +166,7 @@ body {
 		left: 5rem;
 	}
 	#line-text2 {
-		left: 43rem;
+		left: 39rem;
 	}
 
 }
