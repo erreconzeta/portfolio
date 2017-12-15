@@ -166,7 +166,9 @@ body {
 		left: 5rem;
 	}
 	#line-text2 {
-		left: 39rem;
+		left: 45rem;
+    	top: 25rem;
+    	position: absolute;
 	}
 
 }
