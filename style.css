@@ -139,7 +139,7 @@ body {
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 1270px) {
+@media only screen and (max-width: 1070px) {
 	.container {
 		width: 100%;
 		height: 40rem;
@@ -207,7 +207,7 @@ body {
 }*/
 
 
-@media only screen and (min-width: 1271px) {
+@media only screen and (min-width: 1071px) {
 	.header { 
 		width: 30%;
 	}
