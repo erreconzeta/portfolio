@@ -40,7 +40,6 @@ body {
 	top: 0rem;
 	left: 25%;
 	position: relative;
-	  /*QUITAR FLOAT RIGHT!! Y PONER SOLO LEFT CON REM!!*/
 }
 
 .title {
@@ -111,20 +110,36 @@ body {
 	float: left;
 }
 
-.projects:after {
-	color: white;
-	content: '';
+.projects:before {
+    content: '';
+    display: block;
     position: absolute;
-    margin-bottom: -0.15rem;
-    bottom: 0;
     left: 0;
-    width: 0%;
-    border-bottom: 0.2rem solid white;
-    transition: 0.25s;
+    bottom: 0;
+    height: 0.25rem;
+    width: 0;
+    transition: width 0s ease, background .25s ease;
 }
-
+.projects:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 0.25rem;
+    width: 0;
+    background: white;
+    transition: width .25s ease;
+}
+.projects:hover:before {
+    width: 100%;
+    background: white;
+    transition: width .25s ease;
+}
 .projects:hover:after {
-  width: 100%;
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
 }
 
 .separator {
@@ -138,6 +153,34 @@ body {
 
 
 /* MEDIA QUERIES */
+@media only screen and (max-width: 612px) {
+	.container {
+		width: 100%
+	}
+
+	.gif {
+		max-width: 100%;
+	    max-height: 100%;
+	    position: relative;
+    	display: block;
+	    left: 0%;
+	}
+	.title {
+		font-size: 2.5rem;
+    	width: 91.5%;
+    	left: 0%;
+    	position: relative;
+    	display: block;
+	}
+	#line-text2 {
+		display: none;
+	}
+	#line-text {
+		display: none;
+	}
+}
+
+
 
 @media only screen and (max-width: 780px) and (min-width: 613px) {
 	.container {
@@ -159,6 +202,7 @@ body {
 	    left: 0%;
 	    position: relative;
 	    float: right;
+	    z-index: 2;
 	}
 	.container-projects {
     width: 88%;
@@ -194,17 +238,21 @@ body {
 	    left: 0%;
 	    position: relative;
 	    float: right;
+	    z-index: 1;
 	}
 	.container-projects {
-    width: 88%;
-    top: 56rem;
-    position: absolute;
+    	width: 88%;
+    	top: 56rem;
+    	position: absolute;
 	}
 	#line-text2 {
-		display: none;
+		left: 91%;
+    	top: 38rem;
+    	font-size: 1.9rem;
+    	z-index: 2;
 	}
 	#line-text {
-		display: none;
+		font-size: 1.9rem;
 	}
 }
 
@@ -213,20 +261,24 @@ body {
 		width: 30%;
 	}
 	.gif { 
-		left: 40%;
+		left: 42%;
+		max-width: 30rem;
+    	max-height: 30rem;
+		z-index: 1;
 	}
 	.title {
 		width: 30rem;
 		left: 5rem;
-		top: 23.5rem;
+		top: 28.5rem;
 	}
 	#line-text {
 		left: 5rem;
 	}
 	#line-text2 {
-		left: 42rem;
-    	top: 25rem;
+		left: 48rem;
+    	top: 30rem;
     	position: absolute;
+    	z-index: 2;
 	}
 }
 
